@@ -6,7 +6,7 @@
 /*   By: jinliang <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 16:01:09 by jinliang          #+#    #+#             */
-/*   Updated: 2025/05/23 16:06:45 by jinliang         ###   ########.fr       */
+/*   Updated: 2025/05/27 16:24:39 by jinliang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_utoa_base(unsigned long n, int base, int uppercase)
 	char	*digits;
 	int		len;
 
+	if (base < 2 || base > 16)
+		return (NULL);
 	if (uppercase)
 		digits = "0123456789ABCDEF";
 	else
